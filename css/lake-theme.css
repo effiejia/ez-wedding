@@ -993,9 +993,56 @@ a.card:focus-visible {
   margin: 0 auto;
 }
 
-.dress-code-grid .dress-box .card-text + .card-text {
+.dress-box .card-text + .card-text {
   margin-top: 0.5rem;
 }
+
+/* ─── Gift Funds ─── */
+.gift-fund-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 799px) {
+  .gift-fund-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gift-fund-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.gift-payment-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: auto;
+}
+
+.gift-pay-btn {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: var(--fs-ui);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.gift-pay-btn:hover {
+  background: var(--gold);
+  color: var(--bg-dark);
+}
+
 
 /* ─── FAQ ─── */
 .faq-list {
